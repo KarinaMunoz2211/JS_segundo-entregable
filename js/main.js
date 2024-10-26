@@ -1,5 +1,5 @@
 
-const libro = [
+const book = [
     {
         id: 1 ,
         name:"It",
@@ -36,3 +36,14 @@ const libro = [
         image:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTVK-iB9tvSSskbjvwMew8szaP6p8bCVwSsQdonM2EcrzuSSum3A_2VfG-p6oKKKwRnxtd-DeAeoqsL0MygDUB60oLjKPl9e3uMF9D0wxSzgp74ZI2dP8B2YrY8KkRjBcsIZ579m6TUUE/s1600/El-resplandor.jpg",
     }
 ]
+
+let favorites = addToFav 
+
+function addToFav(book){
+
+    if (favorites.some(el => el.id === book.id)){
+        alert ("Tu elección ya fue agregada a Favoritos");
+    } else {
+        favorites.push ()
+    }
+}
