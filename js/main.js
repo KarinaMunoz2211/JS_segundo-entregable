@@ -57,10 +57,28 @@ tittle.innerText="LIBROS DE STEPHEN KING";
 
 let books = document.getElementsByClassName("books");
 
+// ADD BOOK CARDS
+book.forEach(el => {
+    const card = document.createElement("div");
+    const name = document.createElement("p");
+    const genre = document.createElement("p");
+
+    card.className ="book-card";
+
+    name.innerText=el.name;
+    genre.innerText=`Género: ${el.genre}`;
+    
+    card.appendChild(name);
+    card.appendChild(genre);
+
+    container.appendChild(card);
+});
+
 
 // ADD FAVS BUTTON
-const favoriteNode = document.createElement("button")
-favoriteNode.innerText="Añadir a Favoritos"
-favoriteNode
+/*const favoriteNode = document.createElement("button");
+
+favoriteNode.innerText="Añadir a Favoritos";
 
 container.appendChild(favoriteNode);
+*/
