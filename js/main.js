@@ -62,6 +62,9 @@ book.forEach(el => {
     const card = document.createElement("div");
     const name = document.createElement("p");
     const genre = document.createElement("p");
+    
+    const favButton = document.createElement("button");
+    favButton.innerText="Añadir a Favoritos";
 
     card.className ="book-card";
 
@@ -72,13 +75,6 @@ book.forEach(el => {
     card.appendChild(genre);
 
     container.appendChild(card);
+
+    card.appendChild(favButton);
 });
-
-
-// ADD FAVS BUTTON
-/*const favoriteNode = document.createElement("button");
-
-favoriteNode.innerText="Añadir a Favoritos";
-
-container.appendChild(favoriteNode);
-*/
