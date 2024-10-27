@@ -49,4 +49,18 @@ let favorites = []
 } ;
 
 localStorage.setItem(("favorites"),JSON.stringify(favorites));
-//boton
+
+// TITTLE CHANGE
+const tittle = document.getElementById("tittle");
+
+tittle.innerText="LIBROS DE STEPHEN KING";
+
+let books = document.getElementsByClassName("books");
+
+
+// ADD FAVS BUTTON
+const favoriteNode = document.createElement("button")
+favoriteNode.innerText="Añadir a Favoritos"
+favoriteNode
+
+container.appendChild(favoriteNode);
