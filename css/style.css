@@ -16,8 +16,9 @@ h1{
     align-items: center;
     align-content: center;
     background-color: #82230E;
-    margin: 10px;
-    border-radius: 5px;
+    margin: 15px;
+    border-radius: 10px;
+    border:solid 3px #C1C1C1;
     color: #F0F0EE;
     width: 150px;
     height: 150px;
