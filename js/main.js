@@ -41,14 +41,16 @@ let favorites = []
 let newFavorites = []
 
  function addToFav(book){
- 
+ const btn = document.getElementById("btn" + book.id)
     if (favorites.some(el => el.id === book.id)){
-        newFavorites = favorites.filter(el => favorites === book.id);
+        newFavorites = favorites.filter(el=> favorites != book.id);
         favorites = newFavorites;
         alert ("Haz eliminado "+ book.name + " de tus Favoritos");
+        btn.innerText="AÑADIR";
     } else {
         favorites.push (book);
         alert ("Haz agregado "+ book.name + " a tus Favoritos");
+        btn.innerText="REMOVER";
     }
 
 localStorage.setItem(("newFavorites"),JSON.stringify(newFavorites));
@@ -69,7 +71,7 @@ book.forEach(el => {
     const genre = document.createElement("p");
     
     const selectButton = document.createElement("button");
-    // favButton.innerText="Añadir a Favoritos";
+    selectButton.id = "btn" + el.id
     if(favorites.some(book => book.id === el.id)){
         selectButton.innerText="REMOVER";
         } else {
